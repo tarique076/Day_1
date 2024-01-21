@@ -25,4 +25,7 @@ public class Triangle {
         return Math.sqrt(semiPerimeter*(semiPerimeter-sideA)*(semiPerimeter-sideB)*(semiPerimeter-sideC));
     }
 
+    public double circumference(){
+        return sideA+sideB+sideC;
+    }
 }

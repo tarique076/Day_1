@@ -34,4 +34,18 @@ public class TriangleTest {
 
         assertEquals(expected, new Triangle(10,15,20).area(),0.001);
     }
+
+    @Test
+    public void expectValidCircumferenceForSides10_15And20(){
+        double expected = 10+15+20;
+
+        assertEquals(expected, new Triangle(10,15,20).circumference(),0.001);
+    }
+
+    @Test
+    public void expectValidCircumferenceForSides5_12And15(){
+        double expected = 5+12+15;
+
+        assertEquals(expected, new Triangle(5,12,15).circumference(),0.001);
+    }
 }
