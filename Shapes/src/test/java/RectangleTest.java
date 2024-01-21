@@ -44,4 +44,10 @@ public class RectangleTest {
         assertEquals(expected, new Rectangle(10,15).circumference());
     }
 
+    @Test
+    public void expectSquareCreationFailedForSide0(){
+        assertThrows(IllegalArgumentException.class,() ->{
+            new Rectangle(0);
+        });
+    }
 }

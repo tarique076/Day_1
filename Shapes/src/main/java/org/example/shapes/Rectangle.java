@@ -20,4 +20,11 @@ public class Rectangle {
     public int circumference(){
         return 2*(this.length+this.breadth);
     }
+
+    public Rectangle(int length) {
+        if(length==0){
+            throw new IllegalArgumentException();
+        }
+        this.length = length;
+    }
 }
