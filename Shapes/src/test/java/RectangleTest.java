@@ -50,4 +50,28 @@ public class RectangleTest {
             new Rectangle(0);
         });
     }
+
+    @Test
+    public void expectArea25ForSide5(){
+        int expected = 5*5;
+        assertEquals(expected, new Rectangle(5).area());
+    }
+
+    @Test
+    public void expectArea100ForSide10(){
+        int expected = 10*10;
+        assertEquals(expected, new Rectangle(10).area());
+    }
+
+    @Test
+    public void expectCircumference40ForSide10(){
+        int expected = 10+10+10+10;
+        assertEquals(expected, new Rectangle(10).circumference());
+    }
+
+    @Test
+    public void expectCircumference20ForSide5(){
+        int expected = 5+5+5+5;
+        assertEquals(expected, new Rectangle(5).circumference());
+    }
 }

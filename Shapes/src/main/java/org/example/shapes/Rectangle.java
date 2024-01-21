@@ -26,5 +26,6 @@ public class Rectangle {
             throw new IllegalArgumentException();
         }
         this.length = length;
+        this.breadth = length;
     }
 }
