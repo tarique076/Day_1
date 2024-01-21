@@ -35,8 +35,33 @@ class Circle{
     }
 }
 
+class Triangle{
+
+    constructor(sideA, sideB, sideC){
+        if(sideA==0 || sideB == 0 || sideC==0)
+            throw new Error('All sides must be non negative.');
+
+        if(sideA+sideB<=sideC || sideB+sideC<=sideA || sideA+sideC<=sideB){
+            throw new Error('Sum of two sides must always be greater than third side.');
+        }
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
+    }
+
+    area(){
+        let semiPerimeter = (this.sideA+this.sideB+this.sideC)/2;
+
+        return Math.sqrt(semiPerimeter*(semiPerimeter-this.sideA)*(semiPerimeter-this.sideB)*(semiPerimeter-this.sideC));
+    }
+
+    circumference(){
+        return this.sideA+this.sideB+this.sideC;
+    }
+}
 
 module.exports={
     Rectangle,
-    Circle
+    Circle,
+    Triangle
 };
