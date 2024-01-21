@@ -30,4 +30,16 @@ public class LengthComparerTest {
         String expected = "Length1 1m is greater than length2 1cm.";
         assertEquals(expected, new LengthComparer("1m", "1cm").compare());
     }
+
+    @Test
+    public void expect1kmIsGreaterThan1m(){
+        String expected = "Length2 1km is greater than length1 1m.";
+        assertEquals(expected, new LengthComparer("1m", "1km").compare());
+    }
+
+    @Test
+    public void expect1mIsEqualTo100cm(){
+        String expected = "Length1 1m is equal to length2 100cm.";
+        assertEquals(expected, new LengthComparer("1m", "100cm").compare());
+    }
 }

@@ -14,7 +14,15 @@ public class LengthComparer {
     }
 
     public String compare(){
-        return null;
+        double value1 = covertToMeter(this.length1);
+        double value2 = covertToMeter(this.length2);
+        if(value1 > value2)
+            return "Length1 "+ this.length1 + " is greater than length2 "+this.length2+ ".";
+
+        if(value2 > value1)
+            return "Length2 "+ this.length2 + " is greater than length1 "+this.length1+ ".";
+
+        return "Length1 " +this.length1+ " is equal to length2 "+this.length2+".";
     }
 
     public double covertToMeter(String length){
