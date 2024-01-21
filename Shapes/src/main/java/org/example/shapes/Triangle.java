@@ -20,12 +20,12 @@ public class Triangle {
     }
 
     public double area(){
-        double semiPerimeter = (sideA+sideB+sideC)/2;
+        double semiPerimeter = (this.sideA+this.sideB+this.sideC)/2;
 
-        return Math.sqrt(semiPerimeter*(semiPerimeter-sideA)*(semiPerimeter-sideB)*(semiPerimeter-sideC));
+        return Math.sqrt(semiPerimeter*(semiPerimeter-this.sideA)*(semiPerimeter-this.sideB)*(semiPerimeter-this.sideC));
     }
 
     public double circumference(){
-        return sideA+sideB+sideC;
+        return this.sideA+this.sideB+this.sideC;
     }
 }
